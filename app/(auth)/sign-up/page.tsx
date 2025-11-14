@@ -71,8 +71,10 @@ const SignUp = () => {
           error={errors.email}
           validation={{
             required: "Email address is required",
-            pattern: /^\w+@\w+\.\w+$/,
-            message: "Email address is invalid",
+            pattern: {
+              value: /^\w+@\w+\.\w+$/,
+              message: "Email address is invalid",
+            },
           }}
         />
 
