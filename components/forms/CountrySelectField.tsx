@@ -134,7 +134,7 @@ export const CountrySelectField = ({
           required: required ? `Please select ${label.toLowerCase()}` : false,
         }}
         render={({ field }) => (
-          <CountrySelect value={field.value} onChange={field.onChange} />
+          <CountrySelect value={field.value ?? ""} onChange={field.onChange} />
         )}
       />
       {error && <p className="text-sm text-red-500">{error.message}</p>}
